@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer components {
+  .section-title {
+    @apply relative after:absolute after:w-10 after:bottom-0 after:left-0 after:h-1 after:bg-dark-green after:rounded-md text-xl md:text-2xl font-semibold mt-9 mb-3;
+  }
+}
