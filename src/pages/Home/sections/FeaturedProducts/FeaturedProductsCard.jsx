@@ -44,7 +44,7 @@ const FeaturedProductsCard = ({
       <CardBody>
         <Image
           src={image}
-          alt="Green double couch with wooden legs"
+          alt="Product Image"
           borderRadius="lg"
           height={80}
           width={1770}

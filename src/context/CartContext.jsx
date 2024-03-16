@@ -8,6 +8,10 @@ export const CartProvider = ({ children }) => {
   const [showShoppingCartModal, setShowShoppingCartModal] = useState(false);
   const { showToastNotification } = useToastNotification();
   const totalAddedProducts = addedProducts.length;
+  const totalCheckoutPrice = addedProducts?.reduce(
+    (sum, product) => sum + product.price,
+    0
+  );
 
   const addProductToCart = (product) => {
     setAddedProducts([...addedProducts, product]);
@@ -59,6 +63,7 @@ export const CartProvider = ({ children }) => {
         addProductToCart,
         removeProductInCart,
         totalAddedProducts,
+        totalCheckoutPrice,
         isProductAlreadyAdded,
         showShoppingCartModal,
         handleShowShoppingCartModal,

@@ -20,6 +20,7 @@ const ShoppingCartModal = () => {
     handleHideShoppingCartModal,
     totalAddedProducts,
     removeAllAddedProductInCart,
+    totalCheckoutPrice,
   } = useContext(CartContext);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
@@ -50,6 +51,9 @@ const ShoppingCartModal = () => {
             {addedProducts.map((product) => (
               <ShoppingCartCard key={product.id} {...product} />
             ))}
+            <p>
+              Total Price: <strong>${totalCheckoutPrice}</strong>
+            </p>
           </ModalBody>
           <ModalFooter>
             <Button onClick={handleShowSuccessModal} colorScheme="green">
